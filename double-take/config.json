@@ -1,0 +1,28 @@
+{
+  "name": "Double-Take",
+  "version": "0.1",
+  "stage": "experimental",
+  "panel_icon": "mdi:cctv",
+  "slug": "double_take",
+  "description": "Unified UI and API for processing and training images for facial recognition",
+  "url": "https://github.com/jakowenko/double-take",
+  "startup": "application",
+  "webui": "http://[HOST]:[PORT:3000]/",
+  "watchdog": "http://[HOST]:[PORT:3000]/",
+  "ingress": true,
+  "ingress_port": 3000,
+  "ports": {
+    "3000/tcp": 3000
+  },
+  "ports_description": {
+    "3000/tcp": "Web interface (Not required for Hass.io Ingress)"
+  },
+  "services": ["mqtt:need"],
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "options": {},
+  "schema": {},
+  "map": [
+    "media:rw",
+    "config:rw"
+  ]
+}
